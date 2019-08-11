@@ -1,5 +1,4 @@
-# radius-server
-## Multi-Platform Modular NodeJS Radius Server ##
+# radius-server<br/>Multi-Platform Modular NodeJS Radius Server
 
 Since it was so hard to find a simple, free, working radius server for windows... 
 here is a rough working one :)
@@ -19,4 +18,4 @@ here is a rough working one :)
 * Allow src and dst IP address to define virtual servers (optional in config)
 * Some sort of logging?
 * Better error handling, or maybe any error handling...
-(*) More Auth Modules!
+* More Auth Modules!
