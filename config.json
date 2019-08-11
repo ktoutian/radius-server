@@ -1,0 +1,18 @@
+{ "servers": [{
+		"name":"Server 1",
+		"secret":"secret1",
+		"authMethod":"array",
+		"auth":[
+			{"username":"test1", "password":"test1"},
+			{"username":"foo1", "password":"foo1"}		
+		]
+		},{
+		"name":"Server 2",
+		"secret":"secret2",
+		"authMethod":"array",
+		"auth":[
+			{"username":"test2", "password":"test2"},
+			{"username":"foo2", "password":"foo2"}
+		]
+	}]
+}
