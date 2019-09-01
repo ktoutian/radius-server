@@ -25,11 +25,12 @@ server.on('message', function (msg, rinfo) {
 	var userAuth, rad;
 	
 	rad = new radius(conf);
-	userAuth = rad.processPacket(msg);
+	userAuth = rad.processPacket(msg, function(userAuth){
+		if (userAuth!==null){
+			rad.sendReply(server, rinfo, userAuth);
+		}
+	});
 	
-	if (userAuth!==null){
-		rad.sendReply(server, rinfo, userAuth);
-	}
 });
 
 server.on('listening', function () {

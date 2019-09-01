@@ -46,7 +46,7 @@ class Radius{
 		});
 	}
 
-	processPacket(msg, rinfo){
+	processPacket(msg, cb, rinfo){
 		this.msg = msg
 		var code, password;
 		this.packet=null;
@@ -66,8 +66,7 @@ class Radius{
 		password = this.packet.attributes['User-Password'];
 
 		console.log('RADIUS: '+this.cServer.name+': Access-Request for ' + this.username);
-
-		return auth.checkAuth(this.cServer, this.username, password);
+		return auth.checkAuth(this.cServer, this.username, password, cb);
 	}
 }
 module.exports = Radius;
