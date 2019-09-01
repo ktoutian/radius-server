@@ -19,3 +19,8 @@ here is a rough working one :)
 * Some sort of logging?
 * Better error handling, or maybe any error handling...
 * More Auth Modules!
+
+## Enable HTTP NTLM (Windows Authentication) ##
+* npm install httpntlm
+* un-comment code at the bottom of auth.js
+* point to a IIS server with Windows Authentication Enabled
